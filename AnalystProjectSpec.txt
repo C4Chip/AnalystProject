@@ -1,0 +1,48 @@
+﻿Back Test Specifications
+Problems to solve
+      Build an internatice Back-testing platform for investors 
+1. To build an interactive Back Test platform.
+2. Allow users to test various trading strategies, and vary the parameters to those strategies.
+3. Compare with the market and different strategies.
+4. The securities that can be tested include FX, Equities, Indices, ETFs, Options.
+5. Introduction to requirement
+
+
+Build an interactive back-testing platform for investors and traders. The back-testings are for the trading strategies of multiple financial products including FX, equities, indices, ETFs, options, and etc.. The platform should also allow users to test various strategies with various parameters and to compare the strategies against the market payoff as well as the other picked strategies.
+Therefore, the requirement is to deliver:
+
+
+
+
+The platform should include the field that allows users to select specific securities or basket of securities, even select picking The platform should include the fields that allow users to select specific securities or basket of securities, even select strategies(criteria) to pick securities. Then, the platform is required to generate simulated trading and to post results
+
+
+
+
+High-level description:
+In this project we will use historical trade data to perform backtest on different strategies, to present results uses want to know. Using this app, users can get a idea of how their strategies work.
+
+
+
+
+Features:
+1. Load data from the different files.
+2. Clean the data and store those into the useable data structure.
+3. Frontpage starts to interact with users.
+4. Get the users’ inputs and send back to the server.
+5. The server starts to execute the users’ requirements.
+   1. Load data and initialize the strategy.
+   2. Start to iterate the data.
+   3. Match the data with uses’ requirements.
+   4. When matched all the requirements end the iteration.
+   5. Generate a report (tables, figures, and etc).
+1. Send results back to users.
+
+
+
+
+Technologies:
+1. Programing language: Python
+2. Web framework: Django
+Justify for Django:
+Django is a python based free and open-source web framework to develop python web application, and it follows MTV( model template view) design pattern. It allows us to use python technicals to perform backstage calculate and analyze, and also has plenty of online documentations for us to reference during the development.
