@@ -2,67 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test</title>
+    <title>Title</title>
+    {% load staticfiles %}
+    <!--<link href="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.css" rel="stylesheet">-->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.js"></script>-->
+    <link rel="stylesheet" href="{% static 'semantic.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/calendar.css' %}">
+    <!--<link rel="stylesheet" href="{% static 'css/semantic.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'css/semantic.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'css/home.css' %}">-->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/calendar.js' %}"></script>
+    <script src="{% static 'semantic.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"> </script>
+
 </head>
 <body>
-<h1 style="background-color: antiquewhite;color:black">user input</h1>
-<form action="/index/" method="post">
-    <p>
-    <label for="year_from">Year:</label>
-    <input type="text" id="year_from" name="year_from"/>
-    <label for="month_from">Month:</label>
-    <input type="text" id="month_from" name="month_from"/>
-    <label for="day_from">Day:</label>
-    <input type="text" id="day_from" name="day_from"/>
-        </p>
-    <p>to</p>
-    <p>
-    <label for="year_to">Year:</label>
-    <input type="text" id="year_to" name="year_t"/>
-    <label for="month_to">Month:</label>
-    <input type="text" id="month_to" name="month_t"/>
-    <label for="day_to">Day:</label>
-        <input type="text" id="day_to" name="day_t"/>
-         </p>
-    <!--<input type="password" name="password"/>-->
-    <input type="submit" name="submit"/>
-</form>
-<!--
-<table border="1">
-        <thead>
-            <tr>
-                <td>Usernamae</td>
-                <td>Password</td>
-                <td>Date</td>
-                <td>open</td>
-                <td>high</td>
-                <td>close</td>
-                <td>low</td>
-                <td>volume</td>
-                <td>code</td>
-            </tr>
-        </thead>
-        <tbody>
-            {% for result in data %}
-            <tr>
-            <td>{{ result.username}}</td>
-            <td>{{ result.password }}</td>
-            <td>{{ result.date }}</td>
-            <td>{{ result.open}}</td>
-            <td>{{ result.high}}</td>
-            <td>{{ result.close }}</td>
-            <td>{{ result.low }}</td>
-            <td>{{ result.volume }}</td>
-            <td>{{ result.code }}</td>
 
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    -->
 
+
+<select class="ui dropdown type">
+  <option value="">type</option>
+  <option value="1">Stock</option>
+  <option value="2">FX</option>
+  <option value="3">Equity</option>
+  <option value="4">Incices</option>
+  <option value="5">EFTs</option>
+  <option value="6">Options</option>
+</select>
+
+<select class="ui dropdown product">
+  <option value="">product</option>
+  <option value="1">AACC</option>
+  <option value="2">OIL</option>
+  <option value="3">heheh</option>
+  <option value="4">didid</option>
+    <option value="5">GBPUSD</option>
+</select>
+
+<select class="ui dropdown indicator">
+  <option value="">BackTest Indicator</option>
+  <option value="1">London Breakout</option>
+  <option value="2">Dual Thrust</option>
+  <option value="3">Pair Trading</option>
+  <option value="4">Parabolic SAR</option>
+</select>
+
+<div class="ui calendar from" id="example1">
+    from:
+    <div class="ui input right icon">
+        <i class="calendar icon"></i>
+        <input type="text" placeholder="Date" class="date-from" value="2011-06-01">
+    </div>
+</div>
+
+<div class="ui calendar to" id="example2">
+    To:
+    <div class="ui input right icon">
+        <i class="calendar icon"></i>
+        <input type="text" placeholder="Date" class="date-to" value="2011-06-11">
+    </div>
+</div>
+
+<button class="ui button report">Report</button>
+ <input type="submit" name="submit"/>
 <table border="1">
     <caption>show test data</caption>
     {% for line in test_data %}
@@ -76,12 +80,5 @@
 
 </table>
 
-    <p>
-
-        <img src="{{ img }}">
-    </p>
-
-<script src="/static/js/jquery-1.12.4.js"></script>
 </body>
 </html>
-

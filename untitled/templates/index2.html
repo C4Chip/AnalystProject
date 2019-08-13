@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test</title>
+</head>
+<body>
+<h1 style="background-color: antiquewhite;color:black">user input</h1>
+<form action="/index/" method="post">
+    <p>
+    <label for="year_from">Year:</label>
+    <input type="text" id="year_from" name="year_from"/>
+    <label for="month_from">Month:</label>
+    <input type="text" id="month_from" name="month_from"/>
+    <label for="day_from">Day:</label>
+    <input type="text" id="day_from" name="day_from"/>
+        </p>
+    <p>to</p>
+    <p>
+    <label for="year_to">Year:</label>
+    <input type="text" id="year_to" name="year_t"/>
+    <label for="month_to">Month:</label>
+    <input type="text" id="month_to" name="month_t"/>
+    <label for="day_to">Day:</label>
+    <input type="text" id="day_to" name="day_t"/>
+     </p>
+    <!--<input type="password" name="password"/>-->
+    <label for="Code">Code:</label>
+    <input type="text" id="Code" name="Code"/>
+    <input type="submit" name="submit"/>
+
+</form>
+
+
+
+<!--
+<table border="1">
+        <thead>
+            <tr>
+                <td>Usernamae</td>
+                <td>Password</td>
+                <td>Date</td>
+                <td>open</td>
+                <td>high</td>
+                <td>close</td>
+                <td>low</td>
+                <td>volume</td>
+                <td>code</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in data %}
+            <tr>
+            <td>{{ result.username}}</td>
+            <td>{{ result.password }}</td>
+            <td>{{ result.date }}</td>
+            <td>{{ result.open}}</td>
+            <td>{{ result.high}}</td>
+            <td>{{ result.close }}</td>
+            <td>{{ result.low }}</td>
+            <td>{{ result.volume }}</td>
+            <td>{{ result.code }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    -->
+
+<table border="1">
+    <caption>show test data</caption>
+    {% for line in test_data %}
+        <tr>
+        {% for i in line %}
+        <td>{{ i }}</td>
+        {% endfor %}
+
+        </tr>
+    {% endfor %}
+
+</table>
+
+    <p>
+
+        <img src="{{ img }}">
+    </p>
+
+<script src="/static/js/jquery-1.12.4.js"></script>
+</body>
+</html>
+

@@ -20,5 +20,7 @@ from TZmyApp import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    url(r'^index/',views.index),
+    #url(r'^index/',views.index),
+    #url(r'^index/',views.test),
+    url(r'^index/',views.test_quandl),
 ]
